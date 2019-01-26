@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: game_setting
   m_EditorClassIdentifier: 
   dayLengthInSec: 5
+  trapPenaltyInSec: 1

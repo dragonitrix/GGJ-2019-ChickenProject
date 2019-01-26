@@ -54,13 +54,14 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        // Set trap penalty (sec)
+        setting.trapPenaltyInSec = setting.dayLengthInSec / 10f;
         NewDay();
     }
 
 
     private void NewDay()
     {
-
         ResetStats();
         OnNewDayStarts();
     }

@@ -1167,8 +1167,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebc71434d541f6445a1cac1974e63465, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectTypes:
-  - {fileID: 7506739710226661072, guid: 0369b089ececbd74aab0c190d2a95526, type: 3}
   spawnRadius: 500
   distanceBetweenPoints: 30
   offset: 12
@@ -1307,7 +1305,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -10, y: 0}
+  m_AnchoredPosition: {x: -197, y: 0}
   m_SizeDelta: {x: 100, y: 50}
   m_Pivot: {x: 1, y: 0}
 --- !u!114 &2069571726

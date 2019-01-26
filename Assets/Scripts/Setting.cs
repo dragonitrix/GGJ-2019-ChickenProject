@@ -6,4 +6,5 @@ using UnityEngine;
 public class Setting : ScriptableObject
 {
     public float dayLengthInSec;
+    public float trapPenaltyInSec;
 }
