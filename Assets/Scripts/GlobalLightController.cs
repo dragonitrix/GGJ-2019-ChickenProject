@@ -43,7 +43,7 @@ public class GlobalLightController : MonoBehaviour
 
         while (curtainAlpha > 0)
         {
-            curtainAlpha -= Time.deltaTime / 5f;
+            curtainAlpha -= Time.deltaTime / 2f;
             blackCurtain.color = new Color(0, 0, 0, curtainAlpha);
 
             yield return null;
@@ -104,7 +104,7 @@ public class GlobalLightController : MonoBehaviour
 
         while (curtainAlpha < 1)
         {
-            curtainAlpha += Time.deltaTime / 5f;
+            curtainAlpha += Time.deltaTime / 2f;
 
             blackCurtain.color = new Color (0,0,0, curtainAlpha);
 

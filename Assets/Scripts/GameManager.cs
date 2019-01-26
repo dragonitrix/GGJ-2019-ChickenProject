@@ -23,9 +23,7 @@ public class GameManager : MonoBehaviour
 
     public Action OnDayStarts = delegate { };
     public Action OnDayEnds = delegate { };
-
-
-
+    public float score;
 
     public static GameManager Instance
     {
@@ -79,7 +77,12 @@ public class GameManager : MonoBehaviour
     
     public void ChickenReturnsHome()
     {
+        score += setting.scorePointsperFood * food.currentValue;
+        food.ResetValue();
+
         OnDayEnds();
+
+        Invoke("NewDay", setting.secBetweenDays);
 
     }
 
