@@ -12,7 +12,7 @@ public class PlayerControl : MonoBehaviour
     void Start()
     {
         player = GetComponent<Player>();
-        speed.currentValue = speed.initValue;
+        speed.currentValue = speed.maxValue;
     }
 
     // Update is called once per frame

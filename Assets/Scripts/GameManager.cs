@@ -77,9 +77,9 @@ public class GameManager : MonoBehaviour
         lightValue = 1;
         currentDayTimer = setting.dayLength;
 
-        food.currentValue = food.initValue;
-        water.currentValue = water.initValue;
-        branch.currentValue = branch.initValue;
+        food.currentValue = food.maxValue;
+        water.currentValue = water.maxValue;
+        branch.currentValue = branch.maxValue;
 
     }
 

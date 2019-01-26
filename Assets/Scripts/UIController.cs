@@ -12,6 +12,10 @@ public class UIController : MonoBehaviour
     public TextMeshProUGUI branchText;
     public TextMeshProUGUI waterText;
 
+    [SerializeField]
+    private Stat foodStat, branchStat, waterStat;
+
+
     public Image dayBar;
 
 
