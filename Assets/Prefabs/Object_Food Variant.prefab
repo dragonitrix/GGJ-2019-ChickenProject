@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Object_Food Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 1383481207, guid: 69ab0bfa0134ba943a5595b785a2e2a9, type: 3}
+      propertyPath: texture
+      value: 
+      objectReference: {fileID: 2800000, guid: 9c480cc5bf05bc849b557f493f7f4837, type: 3}
     - target: {fileID: 3893905504238249300, guid: 69ab0bfa0134ba943a5595b785a2e2a9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -67,9 +71,5 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1383481207, guid: 69ab0bfa0134ba943a5595b785a2e2a9, type: 3}
-      propertyPath: texture
-      value: 
-      objectReference: {fileID: 2800000, guid: 720970a6cedb5c64da44e9dc881076bc, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 69ab0bfa0134ba943a5595b785a2e2a9, type: 3}
