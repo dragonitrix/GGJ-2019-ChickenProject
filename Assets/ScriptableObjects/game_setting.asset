@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: game_setting
   m_EditorClassIdentifier: 
   dayLengthInSec: 5
-  trapPenaltyInSec: 1
+  secBetweenDays: 4
+  trapPenaltyInSec: 0.5
+  scorePointsperFood: 10

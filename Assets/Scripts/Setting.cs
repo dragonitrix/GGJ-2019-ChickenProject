@@ -6,5 +6,11 @@ using UnityEngine;
 public class Setting : ScriptableObject
 {
     public float dayLengthInSec;
+
+    public float secBetweenDays;
     public float trapPenaltyInSec;
+
+    
+
+    public float scorePointsperFood;
 }
