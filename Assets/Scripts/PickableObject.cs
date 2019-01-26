@@ -15,15 +15,12 @@ public class PickableObject : Object
     }
     public Type type;
 
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
         {
-
             statToChange.currentValue++;
             myPool.AddToPool(this);
-
-            //  GameManager.instance.PickupObject(type);
         }
     }
 

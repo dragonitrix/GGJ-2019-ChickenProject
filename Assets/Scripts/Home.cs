@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,14 +8,22 @@ public class Home : MonoBehaviour
    [SerializeField]
    private float timeUntilColliderWorks;
 
+    [SerializeField]
+    private GlobalLightController lightController;
+
     private float counter;
 
     private BoxCollider MyCollider;
+
+
+
 
     private void Awake()
     {
        GameManager.Instance.OnNewDayStarts += NewDay;
         MyCollider = GetComponent<BoxCollider>();
+        MyCollider.enabled = false;
+
     }
 
 
@@ -34,6 +43,16 @@ public class Home : MonoBehaviour
     }
 
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            ChickenReturnsHome();
+        }
+    }
 
-
+    private void ChickenReturnsHome()
+    {
+        lightController.EndDay();
+    }
 }

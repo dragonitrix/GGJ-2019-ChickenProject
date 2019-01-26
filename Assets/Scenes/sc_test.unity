@@ -194,6 +194,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74a679591a20cf642aebf9b91aae54a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dayLight: {fileID: 11400000, guid: 5b7330363f6cff24cbe3bfc43771ed68, type: 2}
+  settings: {fileID: 11400000, guid: 80cabba9d26f34240931ccfebc025a77, type: 2}
 --- !u!1 &169688414 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1890381412085650745, guid: 0fd8be20493364e4b892f48a0b784d55,
@@ -1046,7 +1048,6 @@ MonoBehaviour:
   water: {fileID: 11400000, guid: 53ad6b7188a69bb47b95359bc8e426fd, type: 2}
   health: {fileID: 11400000, guid: 7df99f207d7aacd4a8bfbc7c23d135ae, type: 2}
   chickHealth: {fileID: 11400000, guid: 5010b1dca62faa1498678bf42396a08c, type: 2}
-  dayState: 0
 --- !u!4 &1642457931
 Transform:
   m_ObjectHideFlags: 0

@@ -23,18 +23,18 @@ public class UIController : MonoBehaviour
         branchText.text = "Branch: " + branchStat.currentValue;
 
 
-        var dayLength = 0f;
-        switch (GameManager.Instance.dayState)
-        {
-            case GameManager.DayState.day:
-                dayLength = GameManager.Instance.setting.dayLength;
-                break;
-            case GameManager.DayState.night:
-                dayLength = GameManager.Instance.setting.nightLength;
-                break;
-            default:
-                break;
-        }
+        //var dayLength = 0f;
+        //switch (GameManager.Instance.dayState)
+        //{
+        //    case GameManager.DayState.day:
+        //        dayLength = GameManager.Instance.setting.dayLength;
+        //        break;
+        //    case GameManager.DayState.night:
+        //        dayLength = GameManager.Instance.setting.nightLength;
+        //        break;
+        //    default:
+        //        break;
+        //}
 
 
     }

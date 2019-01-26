@@ -5,6 +5,5 @@ using UnityEngine;
 [CreateAssetMenu]
 public class Setting : ScriptableObject
 {
-    public float dayLength;
-    public float nightLength;
+    public float dayLengthInSec;
 }
