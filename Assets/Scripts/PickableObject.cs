@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,11 +12,17 @@ public class PickableObject : Object
 
 
 
+    private void Awake()
+    {
+        GameManager.Instance.OnDayEnds += SelfDestruct;
+    }
+
 
     protected override void Start()
     {
         base.Start();
-        if (myPool == null)
+
+                       if (myPool == null)
             Debug.Log("I should be spawned through OjectPool!!");
     }
 
@@ -24,8 +31,14 @@ public class PickableObject : Object
         if (other.tag == "Player")
         {
             statToChange.currentValue++;
-            myPool.AddToPool(this);
+            SelfDestruct();
         }
+    }
+
+
+    private void SelfDestruct()
+    {
+        myPool.AddToPool(this);
     }
 
 }

@@ -14,6 +14,8 @@ public class OjectSpawner : MonoBehaviour
     private void Awake()
     {
         SpawnObjects();
+        GameManager.Instance.OnDayStarts += SpawnObjects;
+        GameManager.Instance.OnDayEnds += ClearObjects;
     }
 
     private void SpawnObjects()
@@ -50,5 +52,11 @@ public class OjectSpawner : MonoBehaviour
 
     }
 
+
+    private void ClearObjects()
+    {
+
+
+    }
 
 }

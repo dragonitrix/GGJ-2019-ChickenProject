@@ -21,8 +21,10 @@ public class GameManager : MonoBehaviour
     public Stat food, branch, water, health, chickHealth;
 
 
-    public Action OnNewDayStarts = delegate { };
-    public Action OnchickenReturnsHome = delegate { };
+    public Action OnDayStarts = delegate { };
+    public Action OnDayEnds = delegate { };
+
+
 
 
     public static GameManager Instance
@@ -63,7 +65,7 @@ public class GameManager : MonoBehaviour
     private void NewDay()
     {
         ResetStats();
-        OnNewDayStarts();
+        OnDayStarts();
     }
 
     private void ResetStats()
@@ -77,7 +79,7 @@ public class GameManager : MonoBehaviour
     
     public void ChickenReturnsHome()
     {
-        OnchickenReturnsHome();
+        OnDayEnds();
 
     }
 

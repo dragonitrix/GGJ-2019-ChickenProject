@@ -22,8 +22,8 @@ public class GlobalLightController : MonoBehaviour
     void Awake()
     {
         light = GetComponent<Light>();
-        GameManager.Instance.OnNewDayStarts += NewDay;
-        GameManager.Instance.OnchickenReturnsHome += EndDay;
+        GameManager.Instance.OnDayStarts += NewDay;
+        GameManager.Instance.OnDayEnds += EndDay;
     }
 
     private void NewDay()

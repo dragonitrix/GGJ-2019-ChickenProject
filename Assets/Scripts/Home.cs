@@ -20,7 +20,7 @@ public class Home : MonoBehaviour
 
     private void Awake()
     {
-       GameManager.Instance.OnNewDayStarts += NewDay;
+       GameManager.Instance.OnDayStarts += NewDay;
         MyCollider = GetComponent<BoxCollider>();
         MyCollider.enabled = false;
 
