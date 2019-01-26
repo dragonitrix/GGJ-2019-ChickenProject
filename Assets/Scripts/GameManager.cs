@@ -1,11 +1,14 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
     [HideInInspector]
-    public static GameManager instance;
+    private static GameManager instance;
+
+
     public Setting setting;
     [HideInInspector]
     public float lightValue = 1;
@@ -13,15 +16,30 @@ public class GameManager : MonoBehaviour
     [HideInInspector]
     public float currentDayTimer = 0;
 
-    public Stat food;
-    public Stat branch;
-    public Stat water;
+    public Stat food, branch, water, health, chickHealth;
+
+
+    public Action OnNewDayStarts = delegate { };
+
 
     public enum DayState
     {
         day,night
     }
     public DayState dayState;
+
+    public static GameManager Instance
+    {
+        get
+        {
+            if (instance == null)
+            {
+                instance = FindObjectOfType<GameManager>();
+            }
+            return instance;
+        }
+    }
+
     public void setDayState(DayState targetState)
     {
         dayState = targetState;
@@ -73,14 +91,27 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        NewDay();
+    }
+
+
+    private void NewDay()
+    {
         dayState = DayState.day;
         lightValue = 1;
         currentDayTimer = setting.dayLength;
 
+        ResetStats();
+        OnNewDayStarts();
+    }
+
+    private void ResetStats()
+    {
         food.currentValue = food.initialValue;
         water.currentValue = water.initialValue;
         branch.currentValue = branch.initialValue;
-
+        health.currentValue = health.maxValue;
+        chickHealth.currentValue = chickHealth.maxValue;
     }
 
     // Update is called once per frame
@@ -105,13 +136,13 @@ public class GameManager : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.P))
         {
-            switch (GameManager.instance.dayState)
+            switch (GameManager.Instance.dayState)
             {
                 case GameManager.DayState.day:
-                    GameManager.instance.setDayState(GameManager.DayState.night);
+                    GameManager.Instance.setDayState(GameManager.DayState.night);
                     break;
                 case GameManager.DayState.night:
-                    GameManager.instance.setDayState(GameManager.DayState.day);
+                    GameManager.Instance.setDayState(GameManager.DayState.day);
                     break;
                 default:
                     break;
@@ -120,22 +151,26 @@ public class GameManager : MonoBehaviour
 
     }
 
-    public void PickupObject(PickableObject.Type type)
-    {
-        switch (type)
-        {
-            case PickableObject.Type.food:
-                food.currentValue++;
-                break;
-            case PickableObject.Type.water:
-                water.currentValue++;
-                break;
-            case PickableObject.Type.branch:
-                branch.currentValue++;
-                break;
-            default:
-                break;
-        }
-    }
+
+
+
+
+    //public void PickupObject(PickableObject.Type type)
+    //{
+    //    switch (type)
+    //    {
+    //        case PickableObject.Type.food:
+    //            food.currentValue++;
+    //            break;
+    //        case PickableObject.Type.water:
+    //            water.currentValue++;
+    //            break;
+    //        case PickableObject.Type.branch:
+    //            branch.currentValue++;
+    //            break;
+    //        default:
+    //            break;
+    //    }
+    //}
 
 }

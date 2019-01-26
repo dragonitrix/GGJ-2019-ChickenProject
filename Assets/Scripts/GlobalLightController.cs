@@ -16,6 +16,6 @@ public class GlobalLightController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        light.intensity = GameManager.instance.lightValue;
+        light.intensity = GameManager.Instance.lightValue;
     }
 }

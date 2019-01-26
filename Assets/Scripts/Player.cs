@@ -14,7 +14,7 @@ public class Player : Object
 
     private void Update()
     {
-        playerSpotlight.intensity = (1 - GameManager.instance.lightValue) * 10;
+        playerSpotlight.intensity = (1 - GameManager.Instance.lightValue) * 10;
     }
 
 }

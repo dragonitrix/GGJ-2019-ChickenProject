@@ -10,43 +10,32 @@ public class UIController : MonoBehaviour
 
     public TextMeshProUGUI foodText;
     public TextMeshProUGUI branchText;
-    public TextMeshProUGUI waterText;
 
     [SerializeField]
     private Stat foodStat, branchStat, waterStat;
+    
 
 
-    public Image dayBar;
-
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
 
         foodText.text = "Food: " + foodStat.currentValue;
         branchText.text = "Branch: " + branchStat.currentValue;
-        waterText.text = "Water: " + waterStat.currentValue;
 
 
         var dayLength = 0f;
-        switch (GameManager.instance.dayState)
+        switch (GameManager.Instance.dayState)
         {
             case GameManager.DayState.day:
-                dayLength = GameManager.instance.setting.dayLength;
+                dayLength = GameManager.Instance.setting.dayLength;
                 break;
             case GameManager.DayState.night:
-                dayLength = GameManager.instance.setting.nightLength;
+                dayLength = GameManager.Instance.setting.nightLength;
                 break;
             default:
                 break;
         }
-        dayBar.rectTransform.localScale = new Vector2((GameManager.instance.currentDayTimer / dayLength),1);
+
 
     }
 }
