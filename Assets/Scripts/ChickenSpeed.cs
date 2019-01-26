@@ -24,4 +24,22 @@ public class ChickenSpeed : MonoBehaviour
             waterStat.currentValue = 0;
     }
 
+    public void Paralyze(float time) {
+        StartCoroutine(Paralyze(time, baseSpeed, speedMultiplier));
+    }
+
+    private IEnumerator Paralyze(float time, float spd, float spdMult) {
+        float lerp = 0;
+
+        while(lerp < time) {
+            baseSpeed = Mathf.Lerp(0, spd, lerp / time);
+            speedMultiplier = Mathf.Lerp(0, spdMult, lerp / time);
+            lerp += Time.deltaTime;
+            yield return null;
+        }
+        // to ensure speed will be at default value
+        baseSpeed = spd;
+        speedMultiplier = spdMult;
+    }
+
 }
