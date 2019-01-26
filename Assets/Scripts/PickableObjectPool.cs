@@ -37,11 +37,6 @@ public class PickableObjectPool : MonoBehaviour
     }
 
 
-    private void Start()
-    {
-        if(pool == null)
-            Debug.Log("I should be spawned through OjectPool!!");
-    }
 
 
 

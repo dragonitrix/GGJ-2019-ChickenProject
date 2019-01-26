@@ -9,11 +9,15 @@ public class PickableObject : Object
 
     public PickableObjectPool myPool;
 
-    public enum Type
+
+
+
+    protected override void Start()
     {
-        food, water, branch
+        base.Start();
+        if (myPool == null)
+            Debug.Log("I should be spawned through OjectPool!!");
     }
-    public Type type;
 
     private void OnTriggerEnter(Collider other)
     {

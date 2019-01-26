@@ -11,7 +11,7 @@ public class Object : MonoBehaviour
     [HideInInspector]
     public Direction direction;
 
-    protected void Start()
+    protected virtual void Start()
     {
         plane = transform.GetChild(0).gameObject;
 
