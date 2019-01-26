@@ -386,28 +386,6 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 3893905504238249304, guid: 69ab0bfa0134ba943a5595b785a2e2a9, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 69ab0bfa0134ba943a5595b785a2e2a9, type: 3}
---- !u!1 &552349874 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3893905504238249305, guid: 69ab0bfa0134ba943a5595b785a2e2a9,
-    type: 3}
-  m_PrefabInstance: {fileID: 552349873}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &552349875
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 552349874}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df9f7c782339ac245a087e73da45e172, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  texture: {fileID: 2800000, guid: ab35267d668f4314388f401fc633b7fa, type: 3}
-  plane: {fileID: 0}
-  direction: 0
-  type: 0
 --- !u!1 &752357968
 GameObject:
   m_ObjectHideFlags: 0
@@ -915,6 +893,9 @@ MonoBehaviour:
   foodText: {fileID: 752357971}
   branchText: {fileID: 2069571726}
   waterText: {fileID: 1151373329}
+  foodStat: {fileID: 11400000, guid: 4b27f0603d133d24a9cfd81206b72742, type: 2}
+  branchStat: {fileID: 11400000, guid: a585c9d55cf50224da9e3f8464d9dd2a, type: 2}
+  waterStat: {fileID: 11400000, guid: 53ad6b7188a69bb47b95359bc8e426fd, type: 2}
   dayBar: {fileID: 124402323}
 --- !u!1 &1392771234
 GameObject:
@@ -1500,6 +1481,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2897452563341740455, guid: 0fd8be20493364e4b892f48a0b784d55,
+        type: 3}
+      propertyPath: speedMultiplier
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0fd8be20493364e4b892f48a0b784d55, type: 3}

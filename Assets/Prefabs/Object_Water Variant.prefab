@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 5782494170891170845, guid: 52c61811071bf6d4a8b0182ab3968fb0,
         type: 3}
       propertyPath: m_Name
-      value: Object_Water
+      value: Object_Water Variant
       objectReference: {fileID: 0}
     - target: {fileID: 5782494170891170832, guid: 52c61811071bf6d4a8b0182ab3968fb0,
         type: 3}
@@ -77,5 +77,11 @@ PrefabInstance:
       propertyPath: type
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7606473126656884952, guid: 52c61811071bf6d4a8b0182ab3968fb0,
+        type: 3}
+      propertyPath: statToChange
+      value: 
+      objectReference: {fileID: 11400000, guid: 53ad6b7188a69bb47b95359bc8e426fd,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52c61811071bf6d4a8b0182ab3968fb0, type: 3}

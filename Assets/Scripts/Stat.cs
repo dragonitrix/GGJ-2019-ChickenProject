@@ -5,12 +5,11 @@ using UnityEngine;
 [CreateAssetMenu]
 public class Stat : ScriptableObject
 {
-    public float maxValue;
-    public float currentValue;
+    public float maxValue, initialValue, currentValue;
 
 
     public void ResetValue()
     {
-        currentValue = maxValue;
+        currentValue = initialValue;
     }
 }

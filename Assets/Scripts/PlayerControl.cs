@@ -5,33 +5,33 @@ using UnityEngine;
 public class PlayerControl : MonoBehaviour
 {
 
-    public Stat speed;
     Player player;
+    private ChickenSpeed speed;
 
-    // Start is called before the first frame update
+
     void Start()
     {
         player = GetComponent<Player>();
-        speed.currentValue = speed.maxValue;
+        speed = GetComponent<ChickenSpeed>();
     }
 
-    // Update is called once per frame
+
     void Update()
     {
-        move();
+        Move();
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            player.plane.GetComponent<Animator>().SetTrigger("squash_trigger");
-            
+            player.plane.GetComponent<Animator>().SetTrigger("squash_trigger");            
         }
-
     }
 
-    void move()
+
+
+    void Move()
     {
-        this.transform.Translate(Vector3.right * Input.GetAxis("Horizontal") * speed.currentValue * Time.deltaTime);
-        this.transform.Translate(Vector3.forward * Input.GetAxis("Vertical") * speed.currentValue * Time.deltaTime);
+        this.transform.Translate(Vector3.right * Input.GetAxis("Horizontal") * speed.speed * Time.deltaTime);
+        this.transform.Translate(Vector3.forward * Input.GetAxis("Vertical") * speed.speed * Time.deltaTime);
 
         if (Input.GetAxis("Horizontal") > 0)
         {

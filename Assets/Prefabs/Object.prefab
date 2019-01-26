@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 3893905504238249301}
   - component: {fileID: 3893905504238249302}
   - component: {fileID: 3893905504238249303}
-  - component: {fileID: 3893905504238249304}
+  - component: {fileID: 1383481207}
   m_Layer: 0
   m_Name: Object
   m_TagString: Untagged
@@ -141,7 +141,7 @@ Transform:
   m_GameObject: {fileID: 3893905504238249305}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1.04, z: 0}
-  m_LocalScale: {x: 2.0976, y: 2.0976, z: 2.0976}
+  m_LocalScale: {x: 4, y: 4, z: 4}
   m_Children:
   - {fileID: 3893905503865158442}
   m_Father: {fileID: 0}
@@ -200,12 +200,12 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3893905504238249305}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &3893905504238249304
+--- !u!114 &1383481207
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -214,9 +214,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 3893905504238249305}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc57bf962056d504dbc545fceffa5cbc, type: 3}
+  m_Script: {fileID: 11500000, guid: df9f7c782339ac245a087e73da45e172, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  texture: {fileID: 0}
+  texture: {fileID: 2800000, guid: ab35267d668f4314388f401fc633b7fa, type: 3}
   plane: {fileID: 0}
   direction: 0
+  statToChange: {fileID: 11400000, guid: 4b27f0603d133d24a9cfd81206b72742, type: 2}
+  type: 0

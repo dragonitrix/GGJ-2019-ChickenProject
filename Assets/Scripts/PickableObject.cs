@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PickableObject : Object
 {
+    [SerializeField]
+    private Stat statToChange;
 
     public enum Type
     {
@@ -15,11 +17,11 @@ public class PickableObject : Object
     {
         if (other.tag == "Player" && GameManager.instance.dayState == GameManager.DayState.day)
         {
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                GameManager.instance.PickupObject(type);
+
+            statToChange.currentValue ++;           
+              //  GameManager.instance.PickupObject(type);
                 Destroy(gameObject);
-            }
+            
         }
     }
 

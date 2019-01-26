@@ -29,9 +29,9 @@ public class UIController : MonoBehaviour
     void Update()
     {
 
-        foodText.text = "Food: " + GameManager.instance.food.currentValue;
-        branchText.text = "Branch: " + GameManager.instance.branch.currentValue;
-        waterText.text = "Water: " + GameManager.instance.water.currentValue;
+        foodText.text = "Food: " + foodStat.currentValue;
+        branchText.text = "Branch: " + branchStat.currentValue;
+        waterText.text = "Water: " + waterStat.currentValue;
 
 
         var dayLength = 0f;
