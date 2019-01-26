@@ -9,8 +9,11 @@ public class Setting : ScriptableObject
 
     public float secBetweenDays;
     public float trapPenaltyInSec;
-
     
-
     public float scorePointsperFood;
+
+    public float wolfChance;
+
+
+
 }

@@ -8,7 +8,6 @@ public class Player : Object
 
     private void Start()
     {
-        base.Start();
         playerSpotlight = transform.GetChild(1).gameObject.GetComponent<Light>();
     }
 

@@ -17,15 +17,15 @@ public class PickableObject : Object {
     public PickableObjectPool myPool;
     protected Action OnConsume = delegate { };
 
-    private void Awake()
+    protected override void Awake()
     {
+        base.Awake();
         GameManager.Instance.OnDayEnds += SelfDestruct;
     }
 
 
-    protected override void Start()
+    protected void Start()
     {
-        base.Start();
         if (myPool == null)
             Debug.Log("I should be spawned through OjectPool!!");
     }
