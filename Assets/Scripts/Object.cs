@@ -12,10 +12,9 @@ public class Object : MonoBehaviour
     [HideInInspector]
     public Direction direction;
 
-    protected virtual void Start()
+    protected virtual void Awake()
     {
         plane = transform.GetChild(0).gameObject;
-
         plane.GetComponent<Renderer>().material.SetTexture("_MainTex", texture);
     }
 

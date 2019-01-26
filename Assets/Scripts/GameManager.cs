@@ -23,7 +23,18 @@ public class GameManager : MonoBehaviour
 
     public Action OnDayStarts = delegate { };
     public Action OnDayEnds = delegate { };
+
+    public Transform playerTransform;
+    public Transform houseTransform;
+
     public float score;
+
+    public enum DayState
+    {
+        day,night
+    }
+
+    public DayState dayState;
 
     public static GameManager Instance
     {
@@ -62,6 +73,7 @@ public class GameManager : MonoBehaviour
 
     private void NewDay()
     {
+        dayState = DayState.day;
         ResetStats();
         OnDayStarts();
     }

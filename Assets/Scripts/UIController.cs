@@ -24,10 +24,6 @@ public class UIController : MonoBehaviour
         branchText.text = "Branch: " + branchStat.currentValue;
 
         scoreText.text = "Score: " + GameManager.Instance.score.ToString("F0");
-
         
- 
-
-
     }
 }
