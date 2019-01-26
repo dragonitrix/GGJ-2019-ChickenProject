@@ -12,6 +12,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Object_Branch Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 1133212352154653084, guid: 1f2094fdef4c95e4ea8173b2b5c6fef6,
+        type: 3}
+      propertyPath: type
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1133212352154653084, guid: 1f2094fdef4c95e4ea8173b2b5c6fef6,
+        type: 3}
+      propertyPath: texture
+      value: 
+      objectReference: {fileID: 2800000, guid: a5a04dd1e227ff3498a6e0b7989d4102, type: 3}
+    - target: {fileID: 1133212352154653084, guid: 1f2094fdef4c95e4ea8173b2b5c6fef6,
+        type: 3}
+      propertyPath: statToChange
+      value: 
+      objectReference: {fileID: 11400000, guid: a585c9d55cf50224da9e3f8464d9dd2a,
+        type: 2}
     - target: {fileID: 4156845330693508031, guid: 1f2094fdef4c95e4ea8173b2b5c6fef6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -76,22 +92,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2800000, guid: 1d6890e4a832fd8439083aaac64a51fa, type: 3}
     - target: {fileID: 1383481207, guid: 1f2094fdef4c95e4ea8173b2b5c6fef6, type: 3}
-      propertyPath: statToChange
-      value: 
-      objectReference: {fileID: 11400000, guid: a585c9d55cf50224da9e3f8464d9dd2a,
-        type: 2}
-    - target: {fileID: 1133212352154653084, guid: 1f2094fdef4c95e4ea8173b2b5c6fef6,
-        type: 3}
-      propertyPath: type
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1133212352154653084, guid: 1f2094fdef4c95e4ea8173b2b5c6fef6,
-        type: 3}
-      propertyPath: texture
-      value: 
-      objectReference: {fileID: 2800000, guid: 1d6890e4a832fd8439083aaac64a51fa, type: 3}
-    - target: {fileID: 1133212352154653084, guid: 1f2094fdef4c95e4ea8173b2b5c6fef6,
-        type: 3}
       propertyPath: statToChange
       value: 
       objectReference: {fileID: 11400000, guid: a585c9d55cf50224da9e3f8464d9dd2a,

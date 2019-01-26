@@ -6,9 +6,6 @@ using UnityEngine;
 public class OjectSpawner : MonoBehaviour
 {
     [SerializeField]
-    private PickableObject[] objectTypes;
-
-    [SerializeField]
     private float spawnRadius, distanceBetweenPoints, offset;
 
     [SerializeField]
