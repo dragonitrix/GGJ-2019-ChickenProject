@@ -7,21 +7,23 @@ public class PickableObject : Object
     [SerializeField]
     private Stat statToChange;
 
+    public PickableObjectPool myPool;
+
     public enum Type
     {
-        food,water,branch
+        food, water, branch
     }
     public Type type;
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.tag == "Player" && GameManager.instance.dayState == GameManager.DayState.day)
+        if (other.tag == "Player")
         {
 
-            statToChange.currentValue ++;           
-              //  GameManager.instance.PickupObject(type);
-                Destroy(gameObject);
-            
+            statToChange.currentValue++;
+            myPool.AddToPool(this);
+
+            //  GameManager.instance.PickupObject(type);
         }
     }
 
