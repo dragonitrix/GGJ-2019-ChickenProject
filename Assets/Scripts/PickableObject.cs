@@ -3,14 +3,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PickableObject : Object
-{
+public class PickableObject : Object {
+    public enum Type {
+        item,
+        trap
+    }
+
     [SerializeField]
     private Stat statToChange;
 
+    public Type type;
     public PickableObjectPool myPool;
-
-
+    protected Action OnConsume = delegate { };
 
     private void Awake()
     {
@@ -21,8 +25,7 @@ public class PickableObject : Object
     protected override void Start()
     {
         base.Start();
-
-                       if (myPool == null)
+        if (myPool == null)
             Debug.Log("I should be spawned through OjectPool!!");
     }
 
@@ -30,7 +33,14 @@ public class PickableObject : Object
     {
         if (other.tag == "Player")
         {
-            statToChange.currentValue++;
+            switch (type) {
+                case Type.item:
+                    statToChange.currentValue++;
+                    break;
+                case Type.trap:
+                    // implement here
+                    break;
+            }
             SelfDestruct();
         }
     }
