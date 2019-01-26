@@ -2,16 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Creature : MonoBehaviour
+public class Object : MonoBehaviour
 {
-    public Texture texture;
-    GameObject plane;
 
-    private void Start()
+    public Texture texture;
+    [HideInInspector]
+    public GameObject plane;
+    [HideInInspector]
+    public Direction direction;
+
+    protected void Start()
     {
         plane = transform.GetChild(0).gameObject;
 
-        plane.GetComponent<Renderer>().material.SetTexture("_mainTex", texture);
+        plane.GetComponent<Renderer>().material.SetTexture("_MainTex", texture);
     }
 
     public enum Direction
@@ -19,7 +23,6 @@ public class Creature : MonoBehaviour
         left,right
     }
 
-    public Direction direction;
 
     public void setDirection(Direction direction)
     {
