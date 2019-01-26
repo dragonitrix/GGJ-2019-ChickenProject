@@ -6,7 +6,8 @@ using UnityEngine;
 public class PickableObject : Object {
     public enum Type {
         item,
-        trap
+        trap,
+        end
     }
 
     [SerializeField]
@@ -38,6 +39,9 @@ public class PickableObject : Object {
                     statToChange.currentValue++;
                     break;
                 case Type.trap:
+                    other.GetComponent<ChickenSpeed>().Paralyze(GameManager.Instance.setting.trapPenaltyInSec);
+                    break;
+                case Type.end:
                     // implement here
                     break;
             }
