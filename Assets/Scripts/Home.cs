@@ -53,6 +53,6 @@ public class Home : MonoBehaviour
 
     private void ChickenReturnsHome()
     {
-        lightController.EndDay();
+        GameManager.Instance.ChickenReturnsHome();
     }
 }

@@ -8,6 +8,9 @@ public class PlayerControl : MonoBehaviour
     Player player;
     private ChickenSpeed speed;
 
+    [SerializeField]
+    private Stat foodStat, healthStat;
+
 
     void Start()
     {
@@ -22,7 +25,12 @@ public class PlayerControl : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            player.plane.GetComponent<Animator>().SetTrigger("squash_trigger");            
+            // player.plane.GetComponent<Animator>().SetTrigger("squash_trigger");     
+            if (foodStat.currentValue > 0 && healthStat.currentValue < healthStat.maxValue)
+            {
+                foodStat.currentValue--;
+                healthStat.currentValue++;
+            }
         }
     }
 

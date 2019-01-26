@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
 
     public float lightValue = 1;
     float lightLerpSpeed = 5;
+
     [HideInInspector]
     public float currentDayTimer = 0;
 

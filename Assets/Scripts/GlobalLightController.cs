@@ -26,6 +26,30 @@ public class GlobalLightController : MonoBehaviour
         GameManager.Instance.OnchickenReturnsHome += EndDay;
     }
 
+    private void NewDay()
+    {
+        light.intensity = 1;
+        dayLight.ResetValue();
+
+        StartCoroutine(FadeIn());
+        StartCoroutine(DayToNight());
+    }
+
+
+    private IEnumerator FadeIn()
+    {
+        float curtainAlpha = 1f;
+        blackCurtain.color = new Color(0, 0, 0, curtainAlpha);
+
+        while (curtainAlpha > 0)
+        {
+            curtainAlpha -= Time.deltaTime / 5f;
+            blackCurtain.color = new Color(0, 0, 0, curtainAlpha);
+
+            yield return null;
+        }
+    }
+
 
     IEnumerator DayToNight()
     {
@@ -71,23 +95,7 @@ public class GlobalLightController : MonoBehaviour
         StopAllCoroutines();
         StartCoroutine(FadeToBlack());
     }
-
-
-
-    private IEnumerator FadeIn()
-    {
-        float curtainAlpha = 1f;
-        blackCurtain.color = new Color(0, 0, 0, curtainAlpha);
-
-        while (curtainAlpha > 0)
-        {
-            curtainAlpha -= Time.deltaTime / 5f;
-
-            blackCurtain.color = new Color(0, 0, 0, curtainAlpha);
-
-            yield return null;
-        }
-    }
+         
 
 
     private IEnumerator FadeToBlack()
@@ -104,21 +112,6 @@ public class GlobalLightController : MonoBehaviour
         }
     }
 
-
-
-
-    private void NewDay()
-    {
-      
-        StartCoroutine(FadeIn());
-
-
-        light.intensity = 1;
-        dayLight.ResetValue();
-
-      StartCoroutine(DayToNight());
-
-
-    }
+         
 
 }
