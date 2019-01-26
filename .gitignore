@@ -8,6 +8,9 @@ Assets/AssetStoreTools*
 # Ignore editor version
 ProjectSettings/ProjectVersion.txt
 
+# Ignore .meta files
+*.meta
+
 # Visual Studio cache directory
 .vs/
 
