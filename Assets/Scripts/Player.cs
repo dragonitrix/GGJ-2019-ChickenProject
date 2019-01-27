@@ -9,19 +9,12 @@ public class Player : Object
     private Vector3 startPosition;
 
 
-    private void OnEnable()
-    {
-        GameManager.Instance.OnDayStarts += ResetPosition;
-        
-    }
-    private void OnDisable()
-    {
-        GameManager.Instance.OnDayStarts -= ResetPosition;
-    }
+
 
     protected override void Awake()
     {
         base.Awake();
+        GameManager.Instance.OnDayStarts += ResetPosition;
         playerSpotlight = transform.GetChild(1).gameObject.GetComponent<Light>();
         startPosition = transform.position;
     }

@@ -26,6 +26,8 @@ public class Wolf : Object
 
     public WolfState wolfState;
 
+
+
     public void setState(WolfState targetState)
     {
         wolfState = targetState;
