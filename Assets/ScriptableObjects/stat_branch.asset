@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28f441d5e7746834ca4e8344b3f31448, type: 3}
   m_Name: stat_branch
   m_EditorClassIdentifier: 
-  initValue: 0
-  currentValue: 1
+  maxValue: 0
+  initialValue: 0
+  currentValue: 0

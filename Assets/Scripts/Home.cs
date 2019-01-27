@@ -6,7 +6,7 @@ using UnityEngine;
 public class Home : MonoBehaviour
 {
     public List<Texture> houseTextures;
-    public Stat houseHealth;
+    public Stat houseHealth, branches;
 
    [SerializeField]
    private float timeUntilColliderWorks;
@@ -18,6 +18,8 @@ public class Home : MonoBehaviour
 
     private BoxCollider MyCollider;
 
+    [SerializeField]
+    private Setting settings;
 
 
 
@@ -64,6 +66,9 @@ public class Home : MonoBehaviour
 
     private void ChickenReturnsHome()
     {
+        houseHealth.currentValue += branches.currentValue * settings.repairHousePerBranch;
+        if(houseHealth.currentValue > houseHealth.maxValue)
+            houseHealth.currentValue = houseHealth.maxValue;
         GameManager.Instance.ChickenReturnsHome();
     }
 }
