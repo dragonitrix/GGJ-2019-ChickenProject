@@ -7,6 +7,7 @@ public class PlayerControl : MonoBehaviour
 
     Player player;
     private ChickenSpeed speed;
+    private float boundary = 498;
 
     [SerializeField]
     private Stat foodStat, healthStat;
@@ -38,8 +39,25 @@ public class PlayerControl : MonoBehaviour
 
     void Move()
     {
-        this.transform.Translate(Vector3.right * Input.GetAxis("Horizontal") * speed.speed * Time.deltaTime);
-        this.transform.Translate(Vector3.forward * Input.GetAxis("Vertical") * speed.speed * Time.deltaTime);
+        var h = Vector3.right * Input.GetAxis("Horizontal") * speed.speed * Time.deltaTime;
+        var v = Vector3.forward * Input.GetAxis("Vertical") * speed.speed * Time.deltaTime;
+
+        // limit horizonal movement
+        if(this.transform.position.x >= boundary && h.x > 0) {
+            h = Vector3.zero;
+        } else if (this.transform.position.x <= -boundary && h.x < 0) {
+            h = Vector3.zero;
+        }
+
+        // limit vertical movement
+        if(this.transform.position.z >= boundary && v.z > 0) {
+            v = Vector3.zero;
+        } else if (this.transform.position.z <= -boundary && v.z < 0) {
+            v = Vector3.zero;
+        }
+
+        this.transform.Translate(h);
+        this.transform.Translate(v);
 
         if (Input.GetAxis("Horizontal") > 0)
         {
