@@ -15,7 +15,7 @@ PrefabInstance:
     - target: {fileID: 1383481207, guid: 69ab0bfa0134ba943a5595b785a2e2a9, type: 3}
       propertyPath: texture
       value: 
-      objectReference: {fileID: 2800000, guid: 1312a250a7c65fd46bee741f6c572b50, type: 3}
+      objectReference: {fileID: 2800000, guid: 345a89a9fd42aef4495d1195b38dfdaa, type: 3}
     - target: {fileID: 3893905504238249300, guid: 69ab0bfa0134ba943a5595b785a2e2a9,
         type: 3}
       propertyPath: m_LocalPosition.x
