@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
     [HideInInspector]
     public float currentDayTimer = 0;
 
-    public Stat food, branch, water, health, chickHealth;
+    public Stat food, branch, water, health, chickHealth, highScore;
 
 
     public Action OnDayStarts = delegate { };
@@ -27,7 +27,6 @@ public class GameManager : MonoBehaviour
     public Transform playerTransform;
     public Transform houseTransform;
 
-    public float score;
 
     public enum DayState
     {
@@ -67,6 +66,7 @@ public class GameManager : MonoBehaviour
     {
         // Set trap penalty (sec)
         setting.trapPenaltyInSec = setting.dayLengthInSec / 10f;
+        highScore.currentValue = 0;
         NewDay();
     }
 
@@ -89,7 +89,9 @@ public class GameManager : MonoBehaviour
     
     public void ChickenReturnsHome()
     {
-        score += setting.scorePointsperFood * food.currentValue;
+        highScore.currentValue += setting.scorePointsperFood * food.currentValue;
+
+
         food.ResetValue();
 
         OnDayEnds();

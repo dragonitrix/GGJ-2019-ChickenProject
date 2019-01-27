@@ -105,7 +105,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcd6e45250043894fa17f13d5152c106, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  texture: {fileID: 2800000, guid: 671d0337fafd20e44b3c215184d0c420, type: 3}
+  texture: {fileID: 2800000, guid: 08fba4a2244ba9f4d866294b5a07a59f, type: 3}
   plane: {fileID: 0}
   direction: 0
   myPool: {fileID: 0}

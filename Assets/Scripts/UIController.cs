@@ -15,7 +15,7 @@ public class UIController : MonoBehaviour
 
 
     [SerializeField]
-    private Stat foodStat, branchStat, waterStat;
+    private Stat foodStat, branchStat, waterStat, highScore;
     
 
     void Update()
@@ -23,7 +23,7 @@ public class UIController : MonoBehaviour
         foodText.text = "Food: " + foodStat.currentValue;
         branchText.text = "Branch: " + branchStat.currentValue;
 
-        scoreText.text = "Score: " + GameManager.Instance.score.ToString("F0");
+        scoreText.text = "Score: " + highScore.currentValue.ToString("F0");
         
     }
 }

@@ -43,11 +43,11 @@ public class PlayerControl : MonoBehaviour
 
         if (Input.GetAxis("Horizontal") > 0)
         {
-            player.setDirection(Object.Direction.right);
+            player.setDirection(Object.Direction.left);
         }
         else if (Input.GetAxis("Horizontal") < 0)
         {
-            player.setDirection(Object.Direction.left);
+            player.setDirection(Object.Direction.right);
         }
 
         if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)

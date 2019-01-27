@@ -4,13 +4,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class CheckGameOver : MonoBehaviour
 {
     [SerializeField]
-    private Stat playerHealth, homeHealth;
+    private Stat playerHealth, homeHealth, highScore;
     [SerializeField]
     private CanvasGroup gameOverCanvas;
+    [SerializeField]
+    private TextMeshProUGUI hihgScoreText;
+
+
 
     private bool gameOver;
 
@@ -43,6 +48,14 @@ public class CheckGameOver : MonoBehaviour
     private IEnumerator GameOverRoutine()
     {
         OnGameOver();
+
+        if (highScore.currentValue > highScore.maxValue)
+        {
+            highScore.maxValue = highScore.currentValue;
+        }
+
+        hihgScoreText.text = "Score: " + highScore.currentValue;
+
         gameOverCanvas.gameObject.SetActive(true);
         while(gameOverCanvas.alpha <1f)
         {
