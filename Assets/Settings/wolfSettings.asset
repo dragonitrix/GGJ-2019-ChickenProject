@@ -16,5 +16,5 @@ MonoBehaviour:
   chaseSpeed: 12
   fleeRadius: 5
   fleeSpeed: 15
-  attackdelay: 1
-  attackDamage: 2
+  attackdelay: 2
+  attackDamage: 1
