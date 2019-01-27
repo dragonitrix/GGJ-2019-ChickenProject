@@ -12,29 +12,34 @@ public class WolfSpawner : MonoBehaviour
 
     [SerializeField]
     private Stat dayLight;
-         
+
+    private bool wolfSpawnLocked;
+
 
     float timeCounter = 0;
     float waveDuration = 3;
 
-    void Update()
+    private void Awake()
     {
-        if (GameManager.Instance.dayState == GameManager.DayState.night)
-        {
-            if (timeCounter < waveDuration)
-            {
-                timeCounter += Time.deltaTime;
-            }
-            else
-            {
-                if(Random.Range(0f, 1f) > dayLight.currentValue) 
-                SpawnWolf();
-
-                timeCounter = 0;
-            }
-        }
+        GameManager.Instance.OnDayEnds += Lockwolfspawn;
     }
 
+    void Update()
+    {
+        if(wolfSpawnLocked) return;
+
+        if (timeCounter < waveDuration)
+        {
+            timeCounter += Time.deltaTime;
+        }
+        else
+        {
+            if (Random.Range(0f, 0.8f) > dayLight.currentValue)
+                SpawnWolf();
+
+            timeCounter = 0;
+        }
+    }
 
     public void SpawnWolf()
     {
@@ -56,11 +61,23 @@ public class WolfSpawner : MonoBehaviour
             wolf.attackTarget = Wolf.AttackTarget.player;
         }
     }
-       
+
+
+    private void Lockwolfspawn()
+    {
+        StartCoroutine(lockWolfspanDuringDayTransition());
+    }
+
+    private IEnumerator lockWolfspanDuringDayTransition()
+    {
+        wolfSpawnLocked = true;
+        yield return new WaitForSeconds(4f);
+        wolfSpawnLocked = false;
+    }
 
 
     private Wolf GetWolf(Vector3 spawnPosition)
-    {        
+    {
         Wolf newObject = pool.GetObject();
         newObject.transform.position = spawnPosition;
 
