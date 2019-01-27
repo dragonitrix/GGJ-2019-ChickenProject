@@ -15,7 +15,7 @@ public class Object : MonoBehaviour
     protected virtual void Awake()
     {
         plane = transform.GetChild(0).gameObject;
-        plane.GetComponent<Renderer>().material.SetTexture("_MainTex", texture);
+        SetTexture(texture);
     }
 
     public enum Direction
@@ -45,5 +45,8 @@ public class Object : MonoBehaviour
 
     }
 
-
+    // can globally set texture
+    public void SetTexture(Texture tx) {
+        plane.GetComponent<Renderer>().material.SetTexture("_MainTex", tx);
+    }
 }

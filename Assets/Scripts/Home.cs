@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class Home : MonoBehaviour
 {
+    public List<Texture> houseTextures;
+    public Stat houseHealth;
+
    [SerializeField]
    private float timeUntilColliderWorks;
 
@@ -35,7 +38,15 @@ public class Home : MonoBehaviour
 
     private void Update()
     {
-        if(counter < 0) return;
+        if (houseHealth.currentValue > houseHealth.maxValue / 2f) {
+            GetComponent<Object>().SetTexture(houseTextures[0]);
+        } else if (houseHealth.currentValue > houseHealth.maxValue / 4f) {
+            GetComponent<Object>().SetTexture(houseTextures[1]);
+        } else {
+            GetComponent<Object>().SetTexture(houseTextures[2]);
+        }
+
+        if (counter < 0) return;
 
         counter -= Time.deltaTime;
         if(counter < 0)

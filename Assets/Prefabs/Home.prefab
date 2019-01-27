@@ -125,6 +125,7 @@ GameObject:
   - component: {fileID: 604464345}
   - component: {fileID: 604464344}
   - component: {fileID: 604464343}
+  - component: {fileID: 2055489696}
   m_Layer: 0
   m_Name: Home
   m_TagString: Untagged
@@ -141,7 +142,7 @@ Transform:
   m_GameObject: {fileID: 604464342}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1.04, z: 0}
-  m_LocalScale: {x: 2.0976, y: 2.0976, z: 2.0976}
+  m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children:
   - {fileID: 265976485}
   m_Father: {fileID: 0}
@@ -200,10 +201,10 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 604464342}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1.31, y: 0.84, z: 1.2}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &604464343
 MonoBehaviour:
@@ -217,6 +218,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc57bf962056d504dbc545fceffa5cbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  texture: {fileID: 2800000, guid: 5e7f0dc5cb63edd4597027eb6e841042, type: 3}
+  texture: {fileID: 2800000, guid: 69a8b8b1986d7c94ba3fb060637f5b6f, type: 3}
   plane: {fileID: 0}
   direction: 0
+--- !u!114 &2055489696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 604464342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 342282e52f20c9d49bdbcc28ddcdfba5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  houseTextures:
+  - {fileID: 2800000, guid: 69a8b8b1986d7c94ba3fb060637f5b6f, type: 3}
+  - {fileID: 2800000, guid: e28fa8d9557aabd46bc4e2c87ba1e020, type: 3}
+  - {fileID: 2800000, guid: 7579a46db870a224e81c071f39f76a7d, type: 3}
+  houseHealth: {fileID: 11400000, guid: b77ea37accc6157408d7b081e58c71a1, type: 2}
+  timeUntilColliderWorks: 5
+  lightController: {fileID: 0}
