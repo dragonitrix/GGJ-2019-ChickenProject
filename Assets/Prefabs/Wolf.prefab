@@ -109,13 +109,8 @@ MonoBehaviour:
   plane: {fileID: 0}
   direction: 0
   myPool: {fileID: 0}
+  settings: {fileID: 11400000, guid: a307a9d79001ea44892789ce72e0de4d, type: 2}
   wolfState: 0
-  chaseRadius: 5
-  chaseSpeed: 5
-  fleeRadius: 5
-  fleeSpeed: 5
-  attackdelay: 5
-  attackDamage: 5
   playerHealth: {fileID: 11400000, guid: 7df99f207d7aacd4a8bfbc7c23d135ae, type: 2}
   homeHealth: {fileID: 11400000, guid: b77ea37accc6157408d7b081e58c71a1, type: 2}
   target: {fileID: 0}

@@ -9,9 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28f441d5e7746834ca4e8344b3f31448, type: 3}
-  m_Name: stat_health
+  m_Script: {fileID: 11500000, guid: 69aa62ced3cbe674e9e71430dc9e35ac, type: 3}
+  m_Name: game_setting
   m_EditorClassIdentifier: 
-  maxValue: 10
-  initialValue: 1
-  currentValue: -96
+  dayLengthInSec: 5
+  secBetweenDays: 4
+  trapPenaltyInSec: 0.5
+  scorePointsperFood: 10
+  wolfChance: 0

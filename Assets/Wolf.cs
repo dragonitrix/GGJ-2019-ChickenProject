@@ -8,6 +8,8 @@ public class Wolf : Object
 
     public WolfPool myPool;
 
+     public WolfSettings settings;
+
     public enum WolfState
     {
         chasing,fleeing,idle
@@ -47,14 +49,9 @@ public class Wolf : Object
         }
     }
 
-    public float chaseRadius;
-    public float chaseSpeed;
-    
-    public float fleeRadius;
-    public float fleeSpeed;
 
-    public float attackdelay;
-    public int attackDamage;
+
+
     public Stat playerHealth;
     public Stat homeHealth;
     float attackTimer = 0;
@@ -105,9 +102,9 @@ public class Wolf : Object
                 var chaseVector = target.position - transform.position;
                 var chasedistance = chaseVector.magnitude;
 
-                if (chasedistance > chaseRadius)
+                if (chasedistance > settings.chaseRadius)
                 {
-                    var deltaVector = chaseVector.normalized * chaseSpeed * Time.deltaTime;
+                    var deltaVector = chaseVector.normalized * settings.chaseSpeed * Time.deltaTime;
                     deltaVector.y = 0;
                     transform.Translate(deltaVector);
                 }
@@ -122,9 +119,9 @@ public class Wolf : Object
                 var fleeVector = transform.position - target.position;
                 var fleedistance = fleeVector.magnitude;
 
-                if (fleedistance < fleeRadius)
+                if (fleedistance < settings.fleeRadius)
                 {
-                    var deltaVector = fleeVector.normalized * chaseSpeed * Time.deltaTime;
+                    var deltaVector = fleeVector.normalized * settings.chaseSpeed * Time.deltaTime;
                     deltaVector.y = 0;
                     transform.Translate(deltaVector);
                 }
@@ -139,9 +136,9 @@ public class Wolf : Object
                 var idleVector = target.position - transform.position;
                 var idledistance = idleVector.magnitude;
 
-                if (idledistance <= chaseRadius)
+                if (idledistance <= settings.chaseRadius)
                 {
-                    if (attackTimer < attackdelay)
+                    if (attackTimer < settings.attackdelay)
                     {
                         attackTimer += Time.deltaTime;
                     }
@@ -169,10 +166,10 @@ public class Wolf : Object
         switch (attackTarget)
         {
             case AttackTarget.player:
-                playerHealth.currentValue -= attackDamage;
+                playerHealth.currentValue -= settings.attackDamage;
                 break;
             case AttackTarget.home:
-                homeHealth.currentValue -= attackDamage;
+                homeHealth.currentValue -= settings.attackDamage;
                 break;
             default:
                 break;

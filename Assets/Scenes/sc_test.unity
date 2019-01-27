@@ -3479,7 +3479,7 @@ PrefabInstance:
         type: 3}
       propertyPath: stat
       value: 
-      objectReference: {fileID: 11400000, guid: 5010b1dca62faa1498678bf42396a08c,
+      objectReference: {fileID: 11400000, guid: b77ea37accc6157408d7b081e58c71a1,
         type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 829a20fddaf1df44ba4883501314c306, type: 3}
@@ -3676,6 +3676,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 527766795}
+  - component: {fileID: 527766794}
   m_Layer: 0
   m_Name: WolfSpawner
   m_TagString: Untagged
@@ -3683,6 +3684,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &527766794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 527766793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8a1972b76627a545b6784e06e2971ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnRadius: 10
+  distanceBetweenPoints: 1
+  offset: 1
+  pool: {fileID: 1004712286}
+  dayLight: {fileID: 11400000, guid: 5b7330363f6cff24cbe3bfc43771ed68, type: 2}
 --- !u!4 &527766795
 Transform:
   m_ObjectHideFlags: 0
@@ -5501,11 +5519,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 863987398}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89f83abbdd504294ca810b13d04641b3, type: 3}
+  m_Script: {fileID: 11500000, guid: 948889dbca4a6c245b950df8bb81a7b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 11400000, guid: 7df99f207d7aacd4a8bfbc7c23d135ae, type: 2}
-  homeHealth: {fileID: 11400000, guid: 5010b1dca62faa1498678bf42396a08c, type: 2}
+  homeHealth: {fileID: 11400000, guid: b77ea37accc6157408d7b081e58c71a1, type: 2}
   gameOverCanvas: {fileID: 56690159}
 --- !u!4 &863987400
 Transform:
@@ -6075,24 +6093,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1004712285}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b1a9bf24fd90c74da1c66663999f51c, type: 3}
+  m_Script: {fileID: 11500000, guid: 75ec2a4316782d842afafc9938097d47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pool: []
   objectTypes:
-  - {fileID: 2156089002887891807, guid: d3c0474adc2a5ba479c4f1b10af375b2, type: 3}
+  - {fileID: 2156089002887891807, guid: 64b5b9cdedd2010468f2400425ad9170, type: 3}
 --- !u!4 &1004712287
 Transform:
   m_ObjectHideFlags: 0
@@ -10674,7 +10679,7 @@ MonoBehaviour:
   branch: {fileID: 11400000, guid: a585c9d55cf50224da9e3f8464d9dd2a, type: 2}
   water: {fileID: 11400000, guid: 53ad6b7188a69bb47b95359bc8e426fd, type: 2}
   health: {fileID: 11400000, guid: 7df99f207d7aacd4a8bfbc7c23d135ae, type: 2}
-  chickHealth: {fileID: 11400000, guid: 5010b1dca62faa1498678bf42396a08c, type: 2}
+  chickHealth: {fileID: 11400000, guid: b77ea37accc6157408d7b081e58c71a1, type: 2}
   playerTransform: {fileID: 169688418}
   houseTransform: {fileID: 2055489695}
   score: 0
@@ -14280,6 +14285,11 @@ PrefabInstance:
         type: 3}
       propertyPath: baseSpeed
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2897452563341740455, guid: 0fd8be20493364e4b892f48a0b784d55,
+        type: 3}
+      propertyPath: boostedSpeed
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0fd8be20493364e4b892f48a0b784d55, type: 3}

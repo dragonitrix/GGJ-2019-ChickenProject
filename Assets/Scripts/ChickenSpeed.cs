@@ -7,7 +7,7 @@ public class ChickenSpeed : MonoBehaviour
     public float speed;
 
     [SerializeField]
-    private float baseSpeed, speedMultiplier, reducePerSec;
+    private float baseSpeed, boostedSpeed, reducePerSec;
 
     [SerializeField]
     private Stat waterStat;
@@ -20,13 +20,18 @@ public class ChickenSpeed : MonoBehaviour
 
     private void Update()
     {
-        speed = baseSpeed + (baseSpeed * speedMultiplier * (waterStat.currentValue / waterStat.maxValue));
+        if (waterStat.currentValue > 0)
+        {
+            waterStat.currentValue -= reducePerSec * Time.deltaTime;
+            speed = boostedSpeed;
+        }
+        else
+        {
+            speed = baseSpeed;
+        }
 
 
-        waterStat.currentValue -= reducePerSec * Time.deltaTime;
-
-        if(waterStat.currentValue < 0)
-            waterStat.currentValue = 0;
+     
     }
 
     private void StopMoving()
@@ -35,22 +40,25 @@ public class ChickenSpeed : MonoBehaviour
     }
 
 
-    public void Paralyze(float time) {
-        StartCoroutine(Paralyze(time, baseSpeed, speedMultiplier));
+    public void Paralyze(float time)
+    {
+        StartCoroutine(Paralyze(time, baseSpeed, boostedSpeed));
     }
 
-    private IEnumerator Paralyze(float time, float spd, float spdMult) {
+    private IEnumerator Paralyze(float time, float spd, float spdMult)
+    {
         float lerp = 0;
 
-        while(lerp < time) {
+        while (lerp < time)
+        {
             baseSpeed = Mathf.Lerp(0, spd, lerp / time);
-            speedMultiplier = Mathf.Lerp(0, spdMult, lerp / time);
+            boostedSpeed = Mathf.Lerp(0, spdMult, lerp / time);
             lerp += Time.deltaTime;
             yield return null;
         }
         // to ensure speed will be at default value
         baseSpeed = spd;
-        speedMultiplier = spdMult;
+        boostedSpeed = spdMult;
     }
 
 }
