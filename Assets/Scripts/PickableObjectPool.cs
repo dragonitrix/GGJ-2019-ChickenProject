@@ -23,6 +23,7 @@ public class PickableObjectPool : MonoBehaviour
         if(pool.Count>0)
         {
             newObject = pool[0];
+            pool.Remove(newObject);
            
         }
         else
@@ -33,6 +34,7 @@ public class PickableObjectPool : MonoBehaviour
         }        
 
         newObject.myPool = this;
+        newObject.gameObject.SetActive(true);
         return newObject;
     }
 

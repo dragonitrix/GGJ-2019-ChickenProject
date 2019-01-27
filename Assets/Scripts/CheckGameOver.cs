@@ -25,7 +25,7 @@ public class CheckGameOver : MonoBehaviour
             if (!gameOver)
             {
                 gameOver = true;
-               StartCoroutine(GameOver());
+               StartCoroutine(GameOverRoutine());
             }
         }
         else
@@ -34,9 +34,16 @@ public class CheckGameOver : MonoBehaviour
 
  
 
-    private IEnumerator GameOver()
+    public void GameOver()
+    {
+        StartCoroutine(GameOverRoutine());
+    }
+
+
+    private IEnumerator GameOverRoutine()
     {
         OnGameOver();
+        gameOverCanvas.gameObject.SetActive(true);
         while(gameOverCanvas.alpha <1f)
         {
             gameOverCanvas.alpha += Time.deltaTime / 2f;

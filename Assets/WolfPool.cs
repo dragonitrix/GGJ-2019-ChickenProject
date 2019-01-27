@@ -17,21 +17,23 @@ public class WolfPool : MonoBehaviour
 
     public Wolf GetObject()
     {
-        Wolf newObject;
+        Wolf newWolf;
 
         if (pool.Count > 0)
         {
-            newObject = pool[0];
+            newWolf = pool[0];
+            pool.Remove(newWolf);
 
         }
         else
         {
-            newObject = Instantiate(objectTypes[Random.Range(0, objectTypes.Length)], Vector3.zero, Quaternion.identity);
-            newObject.gameObject.transform.SetParent(this.transform);
+            newWolf = Instantiate(objectTypes[Random.Range(0, objectTypes.Length)], Vector3.zero, Quaternion.identity);
+            newWolf.gameObject.transform.SetParent(this.transform);
         }
 
-        newObject.myPool = this;
-        return newObject;
+        newWolf.myPool = this;
+        newWolf.gameObject.SetActive(true);
+        return newWolf;
     }
 
 

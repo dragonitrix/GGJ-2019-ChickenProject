@@ -13,6 +13,11 @@ public class ChickenSpeed : MonoBehaviour
     private Stat waterStat;
 
 
+    private void Awake()
+    {
+        FindObjectOfType<CheckGameOver>().OnGameOver += StopMoving;
+    }
+
     private void Update()
     {
         speed = baseSpeed + (baseSpeed * speedMultiplier * (waterStat.currentValue / waterStat.maxValue));
@@ -23,6 +28,12 @@ public class ChickenSpeed : MonoBehaviour
         if(waterStat.currentValue < 0)
             waterStat.currentValue = 0;
     }
+
+    private void StopMoving()
+    {
+        Paralyze(100f);
+    }
+
 
     public void Paralyze(float time) {
         StartCoroutine(Paralyze(time, baseSpeed, speedMultiplier));

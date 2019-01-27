@@ -42,7 +42,7 @@ public class PickableObject : Object {
                     other.GetComponent<ChickenSpeed>().Paralyze(GameManager.Instance.setting.trapPenaltyInSec);
                     break;
                 case Type.end:
-                    // implement here
+                    FindObjectOfType<CheckGameOver>().GameOver();
                     break;
             }
             SelfDestruct();
