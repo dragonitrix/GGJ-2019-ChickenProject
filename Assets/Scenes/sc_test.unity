@@ -3394,6 +3394,53 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1667216316}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &527766793
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 527766795}
+  - component: {fileID: 527766794}
+  m_Layer: 0
+  m_Name: WolfSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &527766794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 527766793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8a1972b76627a545b6784e06e2971ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnRadius: 20
+  distanceBetweenPoints: 0
+  offset: 0
+  pool: {fileID: 1004712286}
+--- !u!4 &527766795
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 527766793}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &530511211
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5481,8 +5528,8 @@ MonoBehaviour:
   - {fileID: 7506739710226661072, guid: 0369b089ececbd74aab0c190d2a95526, type: 3}
   - {fileID: 1133212352154653084, guid: 1f2094fdef4c95e4ea8173b2b5c6fef6, type: 3}
   - {fileID: 7365185991512239667, guid: 52c61811071bf6d4a8b0182ab3968fb0, type: 3}
-  - {fileID: 7506739710226661072, guid: cb3ada933c3ba2e4f9b4880b6b024f7c, type: 3}
-  - {fileID: 7506739710226661072, guid: 83ae8ca822c16b543a05973f1625444f, type: 3}
+  - {fileID: 7506739710226661072, guid: 9e3ed720659988b4d9ae7b684df48e34, type: 3}
+  - {fileID: 7506739710226661072, guid: b583b1fc40ebb7a4abef92ac9a4b287b, type: 3}
 --- !u!4 &974250046
 Transform:
   m_ObjectHideFlags: 0
@@ -5693,6 +5740,51 @@ Transform:
   - {fileID: 332391532}
   m_Father: {fileID: 0}
   m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1004712285
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1004712287}
+  - component: {fileID: 1004712286}
+  m_Layer: 0
+  m_Name: WolfPool
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1004712286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1004712285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75ec2a4316782d842afafc9938097d47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectTypes:
+  - {fileID: 8789283668903496043, guid: 64b5b9cdedd2010468f2400425ad9170, type: 3}
+--- !u!4 &1004712287
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1004712285}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &1021620405 stripped
 RectTransform:
@@ -10126,7 +10218,10 @@ MonoBehaviour:
   water: {fileID: 11400000, guid: 53ad6b7188a69bb47b95359bc8e426fd, type: 2}
   health: {fileID: 11400000, guid: 7df99f207d7aacd4a8bfbc7c23d135ae, type: 2}
   chickHealth: {fileID: 11400000, guid: 5010b1dca62faa1498678bf42396a08c, type: 2}
+  playerTransform: {fileID: 169688418}
+  houseTransform: {fileID: 2055489695}
   score: 0
+  dayState: 0
 --- !u!4 &1642457931
 Transform:
   m_ObjectHideFlags: 0
@@ -12770,6 +12865,12 @@ RectTransform:
 --- !u!1 &2055489690 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 604464342, guid: a297411dbc875f24ca10bd53f6c87613,
+    type: 3}
+  m_PrefabInstance: {fileID: 3893905503768035727}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2055489695 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 604464347, guid: a297411dbc875f24ca10bd53f6c87613,
     type: 3}
   m_PrefabInstance: {fileID: 3893905503768035727}
   m_PrefabAsset: {fileID: 0}

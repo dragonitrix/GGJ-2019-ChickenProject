@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1171761712609953730}
   - component: {fileID: 1171761712609953731}
   - component: {fileID: 1171761712609953788}
-  - component: {fileID: 1171761712609953790}
+  - component: {fileID: 8789283668903496043}
   m_Layer: 0
   m_Name: Wolf
   m_TagString: Player
@@ -93,7 +93,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1171761712609953790
+--- !u!114 &8789283668903496043
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -102,19 +102,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 1171761712609953789}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13fc6aa797bbd2d4aaefb82b7ae2177d, type: 3}
+  m_Script: {fileID: 11500000, guid: fcd6e45250043894fa17f13d5152c106, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  texture: {fileID: 2800000, guid: ada647a1432b7a94787869246b53f7ee, type: 3}
+  texture: {fileID: 2800000, guid: 671d0337fafd20e44b3c215184d0c420, type: 3}
   plane: {fileID: 0}
   direction: 0
   myPool: {fileID: 0}
   wolfState: 0
-  chaseRadius: 7
+  chaseRadius: 5
   chaseSpeed: 5
-  fleeRadius: 30
+  fleeRadius: 20
   fleeSpeed: 5
-  attackdelay: 10
+  attackdelay: 3
   attackDamage: 2
   playerHealth: {fileID: 11400000, guid: 5010b1dca62faa1498678bf42396a08c, type: 2}
   homeHealth: {fileID: 11400000, guid: 7df99f207d7aacd4a8bfbc7c23d135ae, type: 2}

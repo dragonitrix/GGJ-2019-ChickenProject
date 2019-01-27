@@ -21,7 +21,7 @@ PrefabInstance:
         type: 3}
       propertyPath: texture
       value: 
-      objectReference: {fileID: 2800000, guid: 6ecf7f18a1b68e344b44397383a59c25, type: 3}
+      objectReference: {fileID: 2800000, guid: 460c08286d187c14f87b219d546e5e11, type: 3}
     - target: {fileID: 1133212352154653084, guid: 1f2094fdef4c95e4ea8173b2b5c6fef6,
         type: 3}
       propertyPath: statToChange
@@ -37,7 +37,7 @@ PrefabInstance:
         type: 3}
       propertyPath: texture
       value: 
-      objectReference: {fileID: 2800000, guid: 6ecf7f18a1b68e344b44397383a59c25, type: 3}
+      objectReference: {fileID: 2800000, guid: 460c08286d187c14f87b219d546e5e11, type: 3}
     - target: {fileID: 1133212352154653084, guid: 1f2094fdef4c95e4ea8173b2b5c6fef6,
         type: 3}
       propertyPath: statToChange

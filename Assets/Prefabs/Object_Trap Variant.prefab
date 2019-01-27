@@ -16,7 +16,7 @@ PrefabInstance:
         type: 3}
       propertyPath: texture
       value: 
-      objectReference: {fileID: 2800000, guid: 168eb9e548d52e44a9de365dd153cbcc, type: 3}
+      objectReference: {fileID: 2800000, guid: d7f16b2f6079d1a4399d56535858d1b1, type: 3}
     - target: {fileID: 7365185991512239667, guid: 52c61811071bf6d4a8b0182ab3968fb0,
         type: 3}
       propertyPath: statToChange
