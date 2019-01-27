@@ -18,6 +18,9 @@ public class GlobalLightController : MonoBehaviour
     private Light light;
 
 
+    [SerializeField]
+    private AudioSource wolfHowl;
+
 
     void Awake()
     {
@@ -68,6 +71,7 @@ public class GlobalLightController : MonoBehaviour
             yield return null;
         }
 
+        wolfHowl.Play();
         StartCoroutine(NightToDay());
     }
 
@@ -89,6 +93,9 @@ public class GlobalLightController : MonoBehaviour
             
             yield return null;
         }
+
+
+
 
       StartCoroutine(DayToNight());
     }

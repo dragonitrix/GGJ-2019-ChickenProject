@@ -10,6 +10,9 @@ public class Wolf : Object
 
      public WolfSettings settings;
 
+    [SerializeField]
+    private Stat dayLight;
+
     public enum WolfState
     {
         chasing,fleeing,idle
@@ -95,6 +98,12 @@ public class Wolf : Object
     // Update is called once per frame
     void Update()
     {
+        if(dayLight.currentValue > 0.9)
+        {
+            SelfDestruct();
+        }
+
+
         switch (wolfState)
         {
             case WolfState.chasing:
