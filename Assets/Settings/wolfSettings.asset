@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9396117bf8b02344492389c1d18e20eb, type: 3}
   m_Name: wolfSettings
   m_EditorClassIdentifier: 
-  chaseRadius: 1
+  chaseRadius: 5
   chaseSpeed: 12
   fleeRadius: 5
   fleeSpeed: 15
-  attackdelay: 2
+  attackdelay: 1
   attackDamage: 2

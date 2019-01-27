@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxValue: 1
   initialValue: 1
-  currentValue: -0.4194477
+  currentValue: 1
