@@ -15491,6 +15491,11 @@ PrefabInstance:
       propertyPath: lightController
       value: 
       objectReference: {fileID: 119975559}
+    - target: {fileID: 2055489696, guid: a297411dbc875f24ca10bd53f6c87613, type: 3}
+      propertyPath: settings
+      value: 
+      objectReference: {fileID: 11400000, guid: 80cabba9d26f34240931ccfebc025a77,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a297411dbc875f24ca10bd53f6c87613, type: 3}
 --- !u!1001 &4134474416372123036
