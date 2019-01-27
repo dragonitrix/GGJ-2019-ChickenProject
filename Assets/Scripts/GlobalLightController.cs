@@ -53,8 +53,10 @@ public class GlobalLightController : MonoBehaviour
 
     IEnumerator DayToNight()
     {
+        GameManager.Instance.dayState = GameManager.DayState.day;
         yield return new WaitForSeconds(settings.dayLengthInSec);
         float dayLightCounter = settings.dayLengthInSec;
+
 
         while (dayLightCounter > 0)
         {
@@ -66,15 +68,17 @@ public class GlobalLightController : MonoBehaviour
             yield return null;
         }
 
-      StartCoroutine(NightToDay());
+        StartCoroutine(NightToDay());
     }
 
     
 
     IEnumerator NightToDay()
     {
+        GameManager.Instance.dayState = GameManager.DayState.night;
         yield return new WaitForSeconds(settings.dayLengthInSec);
         float dayLightCounter = -settings.dayLengthInSec;
+
 
         while (dayLightCounter < 0)
         {
