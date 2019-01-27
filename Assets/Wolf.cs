@@ -179,6 +179,7 @@ public class Wolf : Object
                 break;
             case AttackTarget.home:
                 homeHealth.currentValue -= settings.attackDamage;
+                print("attackinghome");
                 break;
             default:
                 break;
