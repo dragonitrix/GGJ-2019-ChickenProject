@@ -66,7 +66,10 @@ public class GameManager : MonoBehaviour
     {
         // Set trap penalty (sec)
         setting.trapPenaltyInSec = setting.dayLengthInSec / 10f;
+
         highScore.currentValue = 0;
+        chickHealth.currentValue = chickHealth.maxValue;
+
         NewDay();
     }
 
@@ -84,7 +87,6 @@ public class GameManager : MonoBehaviour
         water.currentValue = water.initialValue;
         branch.currentValue = branch.initialValue;
         health.currentValue = health.maxValue;
-        chickHealth.currentValue = chickHealth.maxValue;
     }
     
     public void ChickenReturnsHome()

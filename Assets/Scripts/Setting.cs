@@ -12,6 +12,8 @@ public class Setting : ScriptableObject
     
     public float scorePointsperFood;
 
+    public float repairHousePerBranch;
+
     public float wolfChance;
 
 

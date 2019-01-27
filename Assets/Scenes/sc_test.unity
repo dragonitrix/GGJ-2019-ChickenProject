@@ -13654,32 +13654,12 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 0b22f69b89fa80b46959706563999be1, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cbf111ac076908f4fad98091e86af11e, type: 3}
---- !u!1 &2055489690 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 604464342, guid: a297411dbc875f24ca10bd53f6c87613,
-    type: 3}
-  m_PrefabInstance: {fileID: 3893905503768035727}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2055489695 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 604464347, guid: a297411dbc875f24ca10bd53f6c87613,
     type: 3}
   m_PrefabInstance: {fileID: 3893905503768035727}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2055489696
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2055489690}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 342282e52f20c9d49bdbcc28ddcdfba5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timeUntilColliderWorks: 5
-  lightController: {fileID: 119975559}
 --- !u!1001 &2060831489
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14926,6 +14906,16 @@ PrefabInstance:
       propertyPath: texture
       value: 
       objectReference: {fileID: 2800000, guid: 69a8b8b1986d7c94ba3fb060637f5b6f, type: 3}
+    - target: {fileID: 2055489696, guid: a297411dbc875f24ca10bd53f6c87613, type: 3}
+      propertyPath: branches
+      value: 
+      objectReference: {fileID: 11400000, guid: a585c9d55cf50224da9e3f8464d9dd2a,
+        type: 2}
+    - target: {fileID: 2055489696, guid: a297411dbc875f24ca10bd53f6c87613, type: 3}
+      propertyPath: settings
+      value: 
+      objectReference: {fileID: 11400000, guid: 80cabba9d26f34240931ccfebc025a77,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a297411dbc875f24ca10bd53f6c87613, type: 3}
 --- !u!1001 &4134474416372123036

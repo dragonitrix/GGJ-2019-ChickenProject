@@ -16,4 +16,5 @@ MonoBehaviour:
   secBetweenDays: 4
   trapPenaltyInSec: 0.5
   scorePointsperFood: 10
+  repairHousePerBranch: 3
   wolfChance: 0
