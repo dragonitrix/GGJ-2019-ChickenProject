@@ -7,7 +7,8 @@ public class PickableObject : Object {
     public enum Type {
         item,
         trap,
-        end
+        end,
+        prop
     }
 
     [SerializeField]
@@ -44,6 +45,8 @@ public class PickableObject : Object {
                 case Type.end:
                     FindObjectOfType<CheckGameOver>().GameOver();
                     break;
+                case Type.prop:
+                    return;
             }
             SelfDestruct();
         }
