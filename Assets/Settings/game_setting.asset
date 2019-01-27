@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69aa62ced3cbe674e9e71430dc9e35ac, type: 3}
   m_Name: game_setting
   m_EditorClassIdentifier: 
-  dayLengthInSec: 5
+  dayLengthInSec: 20
   secBetweenDays: 4
-  trapPenaltyInSec: 0.5
+  trapPenaltyInSec: 2
   scorePointsperFood: 10
   repairHousePerBranch: 3
   wolfChance: 0
