@@ -102,22 +102,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 1171761712609953789}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41439fcfabc162743b6eaad6f5632b4d, type: 3}
+  m_Script: {fileID: 11500000, guid: fcd6e45250043894fa17f13d5152c106, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  texture: {fileID: 2800000, guid: b6e48c6b846e01f4da3fc8939fd971c6, type: 3}
+  texture: {fileID: 2800000, guid: 671d0337fafd20e44b3c215184d0c420, type: 3}
   plane: {fileID: 0}
   direction: 0
   myPool: {fileID: 0}
   wolfState: 0
   chaseRadius: 5
   chaseSpeed: 5
-  fleeRadius: 20
+  fleeRadius: 5
   fleeSpeed: 5
-  attackdelay: 3
-  attackDamage: 1
+  attackdelay: 5
+  attackDamage: 5
   playerHealth: {fileID: 11400000, guid: 7df99f207d7aacd4a8bfbc7c23d135ae, type: 2}
-  homeHealth: {fileID: 11400000, guid: 5010b1dca62faa1498678bf42396a08c, type: 2}
+  homeHealth: {fileID: 11400000, guid: b77ea37accc6157408d7b081e58c71a1, type: 2}
   target: {fileID: 0}
   attackTarget: 0
 --- !u!1 &1171761712698484104

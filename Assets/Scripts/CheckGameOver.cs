@@ -53,6 +53,8 @@ public class CheckGameOver : MonoBehaviour
     }
 
 
+ 
+
     public void  ReloadScene()
     {
         Scene currentScene = SceneManager.GetActiveScene();
