@@ -13,6 +13,17 @@ public class Wolf : Object
         chasing,fleeing,idle
     }
 
+
+
+    protected override void Awake()
+    {
+        base.Awake();
+        GameManager.Instance.OnDayEnds += Endday;
+    }
+    
+
+
+
     public WolfState wolfState;
 
     public void setState(WolfState targetState)
@@ -66,11 +77,6 @@ public class Wolf : Object
         setState(WolfState.chasing);
     }
 
-    protected override void Awake()
-    {
-        base.Awake();
-        GameManager.Instance.OnDayEnds += Endday;
-    }
 
     private void Start()
     {

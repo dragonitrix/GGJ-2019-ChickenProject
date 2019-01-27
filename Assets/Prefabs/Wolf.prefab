@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1171761712609953730}
   - component: {fileID: 1171761712609953731}
   - component: {fileID: 1171761712609953788}
-  - component: {fileID: 5691348477806098924}
+  - component: {fileID: 2156089002887891807}
   m_Layer: 0
   m_Name: Wolf
   m_TagString: Player
@@ -93,7 +93,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &5691348477806098924
+--- !u!114 &2156089002887891807
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -102,10 +102,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1171761712609953789}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13fc6aa797bbd2d4aaefb82b7ae2177d, type: 3}
+  m_Script: {fileID: 11500000, guid: 41439fcfabc162743b6eaad6f5632b4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  texture: {fileID: 2800000, guid: ada647a1432b7a94787869246b53f7ee, type: 3}
+  texture: {fileID: 2800000, guid: b6e48c6b846e01f4da3fc8939fd971c6, type: 3}
   plane: {fileID: 0}
   direction: 0
   myPool: {fileID: 0}
@@ -115,9 +115,9 @@ MonoBehaviour:
   fleeRadius: 20
   fleeSpeed: 5
   attackdelay: 3
-  attackDamage: 2
-  playerHealth: {fileID: 11400000, guid: 5010b1dca62faa1498678bf42396a08c, type: 2}
-  homeHealth: {fileID: 11400000, guid: 7df99f207d7aacd4a8bfbc7c23d135ae, type: 2}
+  attackDamage: 1
+  playerHealth: {fileID: 11400000, guid: 7df99f207d7aacd4a8bfbc7c23d135ae, type: 2}
+  homeHealth: {fileID: 11400000, guid: 5010b1dca62faa1498678bf42396a08c, type: 2}
   target: {fileID: 0}
   attackTarget: 0
 --- !u!1 &1171761712698484104
